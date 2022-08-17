@@ -1,0 +1,11 @@
+# Site settings
+logo_name: "PSICMI"
+logo_desc: "Nice try # psicmi.party"
+github_name: "psicmi"
+url: "psicmi.party"
+email: "all-in-1024@u-world.top"
+
+# Build settings
+markdown: kramdown
+
+

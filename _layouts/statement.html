@@ -4,111 +4,54 @@
 <head>
     <meta charset="utf-8">
 
+
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title></title>
 
-    <title>{{ site.logo_name }} | {{ site.logo_desc }}</title>
-      
+    <!-- CSS -->
+    
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/style.css">
     <link rel="icon" type="image/x-icon" href="favicon.png" />
-    <meta name="description" content="{{ site.logo_name }} | {{ site.logo_desc }}">
-   
-    <link rel="stylesheet" href="css/main.css">
 </head>
 
-<body class="">
-    <div class="container header-contianer">
-        <div class="row">
-            <div class="col-xs-12 col-sm-6 col-md-6 col-lg-8 header-left">
-                <h1>{{ site.logo_name }}</h1>
-                <h2>{{ site.logo_desc }}</h2>
-            </div>
-            <div class="col-xs-12 col-sm-6 col-md-6 col-lg-4 header-right">
-                <ul class="icons no-print">
-
-                    {% if site.github_name %}
-                    <li>
-                        <a target="_blank" href="https://github.com/{{ site.github_name }}" class="button button--sacnite button--round-l">
-                            <i class="fab fa-github" title="Github link"></i>
-                        </a>
-                    </li>
-                    {% endif %} 
-
-                    {% if site.url %}
-                    <li>
-
-                        <a href="{{ site.url }}" target="_blank" class="button button--sacnite button--round-l">
-                            <i class="fas fa-globe" title="{{ site.url }}"></i>
-                        </a>
-                    </li>
-                    {% endif %} 
-                </ul>
-
-                {% if site.email %}
-                <p>
-                    Email: <a href="mailto:{{ site.email }}" target="_blank">{{ site.email }}</a>
-                </p>
-                {% endif %} 
-                {% if site.url %}
-                <p>
-                    Web:
-                    <a href="{{ site.url }}" target="_blank" class="">{{ site.url }}</a>
-                </p>
-                {% endif %} 
-            </div>
-        </div>
-    </div>
-    <main class="page-content" aria-label="Content">
-        <div class="wrapper">
+<body>
 
 
-            <div class="container list-container">
-                <h3>Projects</h3>
-
-
-                {% for txt in site.data.content %}
-            
-                <div class="row clearfix layout layout-left">
-                    <div class="col-xs-12 col-sm-4 col-md-3 col-print-12 details">
-                        <h4>{{ txt.shortname }}</h4>
-                        <p><b>{{ txt.fullname }}</b></p>
-                        <p>{{ txt.dur }}</p>
-                        <p class="no-print aditional-links">
-                        </p>
-                    </div>
-                    <div class="col-xs-12 col-sm-8 col-md-9 col-print-12 content">
-                        <p class="quote">{{ txt.desc }}
-                        </p>
-                        <p>{{ txt.about }}</p>
-                    </div>
-                </div>
-
-                {% endfor %}
-                
-
-
-            </div>
-
-            <div class="container text-container">
-                <h3></h3>
-                <div class="row clearfix">
-                    <div class="col-md-12">
-                        
-
-                    </div>
-                </div>
-
-            </div>
-
-        </div>
-    </main>
-    <div class="container footer-container">
+    <div class="top">
+        <h1>{{ site.logo_name }}</h1>
         <p>
-            {{ site.logo_name }}  -
-            <a href="mailto:{{ site.email }}" target="_blank">{{ site.email }}</a>
+            {{ site.logo_desc }}
         </p>
     </div>
-    <script src="js/index.js"></script>
 
+    <div class="section-container">
+        <div class="container layouts">
+            <div class="row">
+                <div class="col-sm-12 section-description">
+                    <!-- <h3>Choose Template</h3>
+                    asdf -->
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-sm-10 col-sm-offset-1">
+                    <div class="row">
+                        follow me @ <a target="_blank" href="https://github.com/{{ site.github_name }}"></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container footer">
+        <div class="row">
+            <div class="col-sm-12">
+  
+                    <a href="http://{{ site.url }}" target="_blank" class="">{{ site.url }}</a>
+
+            </div>
+        </div>
+    </div>
 
 
 
